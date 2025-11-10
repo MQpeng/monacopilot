@@ -1,6 +1,6 @@
 import { CompletionCopilot } from './completion-copilot'
 import { registerCompletion } from './register'
-export { buildPrompt, getInstruction, buildContext, getFileContent } from './prompt'
+export * from './prompt'
 
 /** @deprecated Use `CompletionCopilot` instead */
 export const Copilot = CompletionCopilot
