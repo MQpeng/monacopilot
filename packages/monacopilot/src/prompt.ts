@@ -13,11 +13,11 @@ export const buildPrompt = (metadata: CompletionMetadata): PromptData => {
 	}
 }
 
-const getInstruction = (): string => {
+export const getInstruction = (): string => {
 	return 'Provide concise and readable code completions that are syntactically and logically accurate, and seamlessly integrate with the existing context. Output only the raw code to be inserted at the cursor location without any additional text, comments, test, or text before or after the cursor.'
 }
 
-const buildContext = (metadata: CompletionMetadata): string => {
+export const buildContext = (metadata: CompletionMetadata): string => {
 	const { technologies = [], filename, relatedFiles = [], language } = metadata
 
 	const techStack = joinWithAnd(
@@ -41,7 +41,7 @@ const buildContext = (metadata: CompletionMetadata): string => {
 	return `${relatedFilesText ? `${relatedFilesText}\n\n` : ''}${contextHeader}`
 }
 
-const getFileContent = (metadata: CompletionMetadata): string => {
+export const getFileContent = (metadata: CompletionMetadata): string => {
 	const { textBeforeCursor, textAfterCursor } = metadata
 
 	return `**Current code:**
