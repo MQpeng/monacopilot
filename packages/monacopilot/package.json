@@ -1,5 +1,5 @@
 {
-	"name": "monacopilot",
+	"name": "@tonyer/monacopilot",
 	"version": "1.2.7",
 	"description": "AI auto-completion plugin for Monaco Editor",
 	"main": "./dist/index.js",
@@ -39,7 +39,7 @@
 	"license": "MIT",
 	"author": "Arshad Yaseen <m@arshadyaseen.com> (https://arshadyaseen.com)",
 	"dependencies": {
-		"@monacopilot/core": "workspace:*"
+		"@tonyer/monacopilot-core": "workspace:*"
 	},
 	"peerDependencies": {
 		"monaco-editor": ">=0.41.0"

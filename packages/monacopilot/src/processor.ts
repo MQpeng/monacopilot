@@ -1,4 +1,4 @@
-import { logger } from '@monacopilot/core'
+import { logger } from '@tonyer/monacopilot-core'
 
 import { CompletionCache } from './classes/cache'
 import { CompletionFormatter } from './classes/formatter'

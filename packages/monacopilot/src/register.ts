@@ -1,4 +1,4 @@
-import { logger } from '@monacopilot/core'
+import { logger } from '@tonyer/monacopilot-core'
 
 import { createInlineCompletionsProvider } from './completions-provider'
 import { createKeyDownListener } from './key-events'

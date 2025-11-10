@@ -1,4 +1,4 @@
-# @monacopilot/core
+# @tonyer/monacopilot-core
 
 The core package provides essential functionality and shared utilities for monacopilot.
 

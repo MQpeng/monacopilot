@@ -1,4 +1,4 @@
-import type { Endpoint, RelatedFile } from '@monacopilot/core'
+import type { Endpoint, RelatedFile } from '@tonyer/monacopilot-core'
 
 import { DEFAULT_MAX_CONTEXT_LINES } from './defaults'
 import type { CompletionMetadata, CompletionResponse } from './types/core'
@@ -18,19 +18,23 @@ type RequestCompletionItemParams = FetchCompletionItemParams & {
 	endpoint: Endpoint
 }
 
+let abortController: AbortController | null = null
+
 export const requestCompletionItem = async (
 	params: RequestCompletionItemParams,
 ): Promise<FetchCompletionItemReturn> => {
 	const { endpoint, body } = params
-
+	if (abortController) abortController.abort()
+	abortController = new AbortController()
 	const response = await fetch(endpoint, {
+		signal: abortController.signal,
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify(body),
 	})
-
+	abortController = null
 	if (!response.ok) {
 		throw new Error(
 			`Error while fetching completion item: ${response.statusText}`,

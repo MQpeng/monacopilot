@@ -1,4 +1,4 @@
-import type { PromptData } from '@monacopilot/core'
+import type { PromptData } from '@tonyer/monacopilot-core'
 
 import type { CompletionMetadata } from './types/core'
 import { joinWithAnd } from './utils/text'
@@ -14,7 +14,7 @@ export const buildPrompt = (metadata: CompletionMetadata): PromptData => {
 }
 
 const getInstruction = (): string => {
-	return 'Provide concise and readable code completions that are syntactically and logically accurate, and seamlessly integrate with the existing context. Output only the raw code to be inserted at the cursor location without any additional text, comments, or text before or after the cursor.'
+	return 'Provide concise and readable code completions that are syntactically and logically accurate, and seamlessly integrate with the existing context. Output only the raw code to be inserted at the cursor location without any additional text, comments, test, or text before or after the cursor.'
 }
 
 const buildContext = (metadata: CompletionMetadata): string => {

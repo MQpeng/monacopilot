@@ -6,7 +6,7 @@ import type {
 	Filename,
 	RelatedFile,
 	Technologies,
-} from '@monacopilot/core'
+} from '@tonyer/monacopilot-core'
 
 import type {
 	FetchCompletionItemHandler,

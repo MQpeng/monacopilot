@@ -1,4 +1,4 @@
-import { Copilot, type PromptData } from '@monacopilot/core'
+import { Copilot, type PromptData } from '@tonyer/monacopilot-core'
 
 import { buildPrompt } from './prompt'
 import type {
