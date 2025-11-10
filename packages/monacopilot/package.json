@@ -26,7 +26,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/arshad-yaseen/monacopilot.git"
+		"url": "git+https://github.com/MQpeng/monacopilot.git"
 	},
 	"homepage": "https://monacopilot.dev",
 	"maintainers": [
